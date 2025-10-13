@@ -1,0 +1,79 @@
+:root{
+      --bg:#f0f2f5;
+      --card:#fff;
+      --accent:#1877f2;
+      --muted:#6b7280;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+      background:var(--bg);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+      min-height:100vh;
+    }
+    .card{
+      width:100%;
+      max-width:420px;
+      background:var(--card);
+      border-radius:12px;
+      box-shadow:0 8px 30px rgba(8,15,30,0.06);
+      padding:20px;
+    }
+    .hero{
+      width:100%;
+      border-radius:8px;
+      overflow:hidden;
+      background:#e9f2fb;
+      margin-bottom:14px;
+    }
+    .hero img{width:100%;height:auto;display:block;object-fit:cover}
+    h1{
+      font-size:20px;
+      margin:6px 0 8px 0;
+      color:#111827;
+      text-align:center;
+    }
+    p.lead{
+      margin:0 0 14px 0;
+      text-align:center;
+      color:var(--muted);
+      font-size:14px;
+    }
+    form .field{
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+      margin-bottom:12px;
+    }
+    label{font-size:13px;color:var(--muted)}
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="password"]{
+      padding:10px 12px;
+      border:1px solid #e6e9ee;
+      border-radius:8px;
+      font-size:14px;
+      outline:none;
+      background:#fff;
+    }
+    input:focus{box-shadow:0 0 0 3px rgba(24,119,242,0.08);border-color:var(--accent)}
+    .btn{
+      width:100%;
+      background:var(--accent);
+      color:#fff;
+      border:none;
+      padding:12px;
+      border-radius:10px;
+      font-weight:600;
+      cursor:pointer;
+      font-size:15px;
+    }
+    .btn:disabled{opacity:.6;cursor:not-allowed}
+    .note{font-size:13px;color:var(--muted);text-align:center;margin-top:12px}
+    @media (max-width:420px){ .card{padding:16px} }
